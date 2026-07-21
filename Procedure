@@ -1,0 +1,17 @@
+CREATE PROCEDURE sp_account_summary(IN p_customer_id BIGINT)
+
+BEGIN
+
+SELECT a.account_number, a.balance, COUNT(t.id) AS txn_count
+
+FROM accounts a
+
+LEFT JOIN transactions t ON t.from_account_id = a.id
+
+WHERE a.customer_id = p_customer_id
+
+GROUP BY a.id;
+
+END $$
+
+DELIMITER ;
