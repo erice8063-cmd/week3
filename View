@@ -1,0 +1,8 @@
+CREATE VIEW account_summary AS
+SELECT 
+	a.id,
+    a.account_name,
+    a.type
+FROM accounts a; 
+
+SELECT * FROM account_summary;
