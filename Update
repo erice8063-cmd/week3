@@ -1,0 +1,7 @@
+BEGIN;
+UPDATE data_table
+SET BALANCE = balance + 500.00
+WHERE id = 5; 
+COMMIT;
+
+SELECT * FROM data_table WHERE id = 5
