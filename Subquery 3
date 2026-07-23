@@ -1,0 +1,5 @@
+SELECT balance
+FROM data_table 
+WHERE id > 1300.45; 
+
+Credit: Bro Code YT
