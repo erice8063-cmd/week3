@@ -1,0 +1,16 @@
+CREATE TABLE data_table (
+	id INT PRIMARY KEY,
+    type VARCHAR(50) NOT NULL,
+    data_table_name VARCHAR(50),
+    balance DECIMAL(10, 2)
+);
+
+INSERT INTO data_table VALUES
+(1, 'Ricky Checking', 'checking', 1500.00),
+(2, 'Nancy Savings', 'savings', 5000.00),
+(3, 'Ricky Checking', 'checking', 800.50),
+(4, 'Nancy Savings', 'savings', 32000.00);
+
+SELECT type, COUNT(*) AS num_data_table, SUM(balance) AS total_balance
+FROM data_table 
+GROUP BY type;
