@@ -1,0 +1,8 @@
+ALTER TABLE data_table
+ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
+
+UPDATE data_table
+SET is_active = FALSE
+WHERE id = 5;
+
+SELECT * FROM data_table WHERE is_active = TRUE;
