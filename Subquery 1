@@ -1,3 +1,5 @@
 SELECT balance,
 	(SELECT AVG(balance) FROM data_table) AS avg_pay
 FROM data_table
+
+Credit: Bro Code YT
